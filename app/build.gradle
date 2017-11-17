@@ -1,0 +1,35 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 26
+    buildToolsVersion "27.0.1"
+
+    defaultConfig {
+        applicationId "com.example.android.notepad"
+        minSdkVersion 14
+        targetSdkVersion 26
+
+        testApplicationId "com.example.android.notepad.tests"
+        testInstrumentationRunner "android.test.InstrumentationTestRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:support-v13:26.1.0'
+    implementation 'com.google.android.gms:play-services-maps:11.6.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:design:26.1.0'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.google.android.gms:play-services-auth:11.6.0'
+    compile 'com.google.android.gms:play-services-drive:11.6.0'
+    implementation 'com.google.api.client:google-api-client:1.4.1-beta'
+
+
+}
